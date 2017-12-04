@@ -1,6 +1,6 @@
 # README #
 
-Snake Game made by Daniel Vieira(bitbucket.org/devieira) and Lucas S. Takahashi(bitbucket.org/devieira)
+Snake Game made by Daniel Vieira(bitbucket.org/devieira) and Lucas S. Takahashi(bitbucket.org/lucasshoiti)
 
 ### What is this repository for? ###
 
