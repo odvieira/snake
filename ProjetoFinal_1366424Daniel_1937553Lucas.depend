@@ -1,0 +1,61 @@
+# depslib dependency file v1.0
+1511753407 source:/home/dvieira/CProjects/ProjetoFinal_1366424Daniel_1937553Lucas/src/main.c
+	"snakeGame.h"
+
+1511759706 /home/dvieira/CProjects/ProjetoFinal_1366424Daniel_1937553Lucas/src/snakeGame.h
+	"player.h"
+	"elements.h"
+
+1511741017 /home/dvieira/CProjects/ProjetoFinal_1366424Daniel_1937553Lucas/src/player.h
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ncurses.h>
+	<time.h>
+
+1511760234 /home/dvieira/CProjects/ProjetoFinal_1366424Daniel_1937553Lucas/src/elements.h
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ncurses.h>
+	<time.h>
+
+1511745721 source:/home/dvieira/CProjects/ProjetoFinal_1366424Daniel_1937553Lucas/src/player.c
+	"player.h"
+
+1511760103 source:/home/dvieira/CProjects/ProjetoFinal_1366424Daniel_1937553Lucas/src/elements.c
+	"elements.h"
+
+1511760136 source:/home/dvieira/CProjects/ProjetoFinal_1366424Daniel_1937553Lucas/src/snakeGame.c
+	"snakeGame.h"
+
+1511911167 source:/home/lucas/Documentos/projetofinal_1366424daniel_1937553lucas/src/elements.c
+	"elements.h"
+
+1511907681 /home/lucas/Documentos/projetofinal_1366424daniel_1937553lucas/src/elements.h
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ncurses.h>
+	<time.h>
+
+1511898891 source:/home/lucas/Documentos/projetofinal_1366424daniel_1937553lucas/src/main.c
+	"snakeGame.h"
+
+1511898891 /home/lucas/Documentos/projetofinal_1366424daniel_1937553lucas/src/snakeGame.h
+	"player.h"
+	"elements.h"
+
+1511906452 /home/lucas/Documentos/projetofinal_1366424daniel_1937553lucas/src/player.h
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<ncurses.h>
+	<time.h>
+
+1511908065 source:/home/lucas/Documentos/projetofinal_1366424daniel_1937553lucas/src/player.c
+	"player.h"
+
+1511910886 source:/home/lucas/Documentos/projetofinal_1366424daniel_1937553lucas/src/snakeGame.c
+	"snakeGame.h"
+
