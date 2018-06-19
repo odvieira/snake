@@ -4,11 +4,9 @@ Snake Game made by Daniel Vieira(bitbucket.org/devieira) and Lucas S. Takahashi(
 
 ### What is this repository for? ###
 
-This is a snake game writed in C, there are some resources of the Ncurses library in the source code, which makes it a
-dependency, so, if wanna play it, you must run in a unix machine with Ncurses installed.
+This is an snake game made using C, it was used some resources from Ncurses library, so, it is necessary an unix machine with Ncurses to play this game.
 
-This project is an academic activity made with by two beginners, so it could not be the optimal program but it's really fun
-and works without known bugs. Have fun.
+This project is an academic activity.
 
 ### How do I get set up? ###
 
