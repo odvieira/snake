@@ -15,13 +15,14 @@ This project is an academic activity.
 Using Make on a terminal opened inside the game's folder, you can install and remove the game easily.
 Commands:
 ##
-		$ make : Default action, wich builds the project, after that, you just need to execute the snakeGame file, by inserting line ./	snakeGame in the terminal
+		$ make 	//Build the project, after that, by inserting line
+		$./snakeGame //you should be good to go
 ##
-		$ make run : build and execute;
+		$ make run  //build and execute;
 ##
-		$ make clean : unmount the project;
+		$ make clean //unmount the project;
 ##
-		$ make purge : delete all files from the project
+		$ make purge //delete all files from the project
 
 ##
 
