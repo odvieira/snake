@@ -10,12 +10,18 @@ This project is an academic activity.
 
 ### How do I get set up? ###
 
-[...]
-
-### Contribution guidelines ###
-
-[...]
+Using Make on a terminal opened inside the game's folder, you can install and remove the game easily.
+Commands:
+	$ make
+		default action, wich builds the project, after that, you just need to execute the snakeGame file, by
+		inserting line ./snakeGame in the terminal.
+	$ make run
+		build and execute
+	$ make clean
+		unmount the project
+	$ make purge
+		delete all files from the project
 
 ### Who do I talk to? ###
 
-[...]
+Daniel Vieira: dvieira@alunos.utfpr.edu.br
