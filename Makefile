@@ -4,8 +4,8 @@ OBJ = main.o elements.o snakeGame.o player.o
 DEPS = -lncurses
 output_name = snakeGame
 
-build: $(OBJ)
-	gcc $(OBJ) $(DEPS) -o $(output_name)
+build: clean $(OBJ)
+	gcc $(OBJ) $(DEPS) -o $(output_name) && mkdir obj && mv *.o obj;
 
 main.o: src/main.c
 	gcc -c src/main.c
@@ -23,10 +23,10 @@ run: build
 	./$(output_name)
 
 clean:
-	rm $(output_name); rm *.o
+	@[ -f ./obj/main.o ] && (rm -r obj && rm $(output_name)) || true
 
 purge:
-	rm *.*; rm */*.*; rmdir *;
+	@[ -f ./snakeGame ] && rm -r * || true
 
 help:
 	echo "\n\t\tmake run = compile and run\n\t\tmake build = just compile"
