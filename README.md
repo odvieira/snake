@@ -20,7 +20,7 @@ Commands:
 ##
 		$ make run  //build and execute;
 ##
-		$ make clean //unmount the project;
+		$ make clean //umount the project;
 ##
 		$ make purge //delete all files from the project
 
