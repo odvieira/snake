@@ -19,6 +19,7 @@ Type=Application" >> sc.txt
 		sudo mkdir /usr/games/snakesv
 	fi
 	sudo cp -r ./* /usr/games/snakesv
+	rm -r ./obj && rm snakesv
 	sudo mv ./sc.txt /home/$USER/Desktop/SnakeSV.desktop
 else
 	echo "Builded!"

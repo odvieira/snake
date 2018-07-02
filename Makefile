@@ -8,7 +8,7 @@ desktop_name = SnakeSV
 build: clean $(OBJ)
 	gcc $(OBJ) $(DEPS) -o $(output_name) && mkdir obj && mv *.o obj;
 	chmod +x ./data/sc_script.sh && ./data/sc_script.sh;
-	chmod +x ~/Desktop/$(desktop_name).desktop;
+	if [ -e ~/Desktop/$(desktop_name).desktop ]; then chmod +x ~/Desktop/$(desktop_name).desktop; fi;
 
 main.o: src/main.c
 	gcc -c src/main.c
@@ -23,14 +23,14 @@ player.o: src/player.c
 	gcc -c src/player.c
 
 run: build
-	./$(output_name)
+	if [ -e ./$(output_name ]; then ./$(output_name); fi;
 
 clean:
 	@[ -f ./obj/main.o ] && ( rm -r ./obj && rm $(output_name) ) || true;
 
 purge: clean
 	@[ -f ~/Desktop/$(desktop_name).desktop ] && rm ~/Desktop/$(desktop_name).desktop || true;
-	sudo rm -r /usr/games/$(output_name)
+	if [ -d /usr/games/$(output_name) ]; then sudo rm -r /usr/games/$(output_name); fi;
 
 help:
 	echo "\n\t\tmake run = compile and run\n\t\tmake build = just compile"
