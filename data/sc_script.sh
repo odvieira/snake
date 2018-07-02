@@ -11,17 +11,15 @@ if [ $input == 1 ]; then
 Encoding=UTF-8
 Name=Snake Game
 Comment=Launch SnakeGame 1.0
-Exec=gnome-terminal -e /usr/games/snakesv/snake
+Exec=gnome-terminal -e /usr/games/snakesv/snakesv
 Icon=utilities-terminal
 Terminal=true
 Type=Application" >> sc.txt
-	sudo mkdir /usr/games/snakesv
-	sudo mkdir usr/games/snakesv/data
-	sudo mv ./top_player_rec.snk /usr/games/snakesv/data/
-	sudo mv ../snakesv /usr/games/snakesv/
-	sudo mv ./sc.txt /home/$USER/Desktop/Snake\ SV.desktop
-	exit 1
+	if [ ! -d /usr/games/snakesv ]; then
+		sudo mkdir /usr/games/snakesv
+	fi
+	sudo cp -r ./* /usr/games/snakesv
+	sudo mv ./sc.txt /home/$USER/Desktop/SnakeSV.desktop
 else
 	echo "Builded!"
-	exit 2
 fi
