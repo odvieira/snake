@@ -4,7 +4,7 @@ Snake Game made by Daniel Vieira(bitbucket.org/devieira) and Lucas S. Takahashi(
 
 ### What is this repository for? ###
 
-This project is an snake game made in C, it is necessary an unix system with the following packages to compile the game:
+This project is an snake game made in C, is necessary an debian based system (such as ubuntu) with the following packages to compile the game:
 ##
 		sudo apt install libncurses-dev
 		sudo apt install build-essential
