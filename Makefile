@@ -23,7 +23,7 @@ player.o: src/player.c
 	gcc -c src/player.c
 
 run: build
-	if [ -e ./$(output_name ]; then ./$(output_name); fi;
+	if [ -e ./$(output_name) ]; then ./$(output_name); else /usr/games/$(output_name)/$(output_name); fi;
 
 clean:
 	@[ -f ./obj/main.o ] && ( rm -r ./obj && rm $(output_name) ) || true;
