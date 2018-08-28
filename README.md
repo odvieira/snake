@@ -1,14 +1,6 @@
 # README #
 
-Snake Game made by Daniel Vieira(bitbucket.org/devieira) and Lucas S. Takahashi(bitbucket.org/lucasshoiti)
-
-### What is this repository for? ###
-
-This project is an snake game made in C, is necessary an debian based system (such as ubuntu) the following packages to compile the game:
-##
-		sudo apt install libncurses-dev
-		sudo apt install build-essential
-##
+Snake Game made by Daniel Vieira(github.com/odvieira) and Lucas S. Takahashi(gitlab.com/lucasshoiti)
 
 ### How do I get set up? ###
 
@@ -23,8 +15,6 @@ Commands: (an desktop shortcut could be created by default, but the gnome-termin
 		$ make clean //unmount the project;
 ##
 		$ make purge //delete all files from the project
-
-##
 
 ### Who do I talk to? ###
 
