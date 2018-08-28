@@ -136,6 +136,14 @@ Status showRecords(int height, int width)
     return MAINMENU;
 }
 
+char* getGameTime(Time* startTime, char* formatedTime)
+{
+    time_t timeAux = time(&timeAux);
+    Time* now = localtime(&timeAux);
+    sprintf(formatedTime, "%d:%d:%d", now->tm_hour - startTime->tm_hour, now->tm_min - startTime->tm_min, now->tm_sec - startTime->tm_sec);
+    return formatedTime;
+}
+
 int newGame(int height, int width)
 {
     srand(time(NULL));
@@ -143,6 +151,9 @@ int newGame(int height, int width)
     Status s = SUCCESS;
     Direction d = RIGHT;
     int pts = 0, bonusCont = 0, bonusChkpt = 5;
+    time_t now = time(&now);
+    Time *startTime = localtime(&now);
+    char *formatedTime = (char*)malloc(sizeof(char)*20);
 
     while(s != FAILURE)
     {
@@ -156,6 +167,7 @@ int newGame(int height, int width)
         addstr(" Food\t\t");
         addch(ACS_CKBOARD);
         addstr(" Bonus\t\t");
+        addstr(getGameTime(startTime, &formatedTime));
         displayCoord(board->snake, "o");
         displayCoord_chtype(board->food, ACS_DIAMOND);
         displayCoord_chtype(board->bonus, ACS_CKBOARD);

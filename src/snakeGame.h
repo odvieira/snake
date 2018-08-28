@@ -12,6 +12,8 @@ AUTHORS:    Daniel E. Vieira    1366424
 #include "player.h"
 #include "elements.h"
 
+#include <time.h>
+
 typedef enum status{
     SUCCESS,
     FAILURE,
@@ -30,11 +32,15 @@ typedef enum direction{
     LEFT,
 }Direction;
 
+typedef struct tm Time;
+
 Status mainMenu(int height, int width);
 Status starting_screen(int height, int width);
 Status showRecords(int height, int width);
 Status gameOver(int height, int width, int pts);
 Status moveSnake(Board* snake, Direction d);
+
+char* getGameTime(Time* startTime, char* formatedTime);
 
 int newGame(int height, int width);
 int snakeCanGo(Board* board, int y, int x);
