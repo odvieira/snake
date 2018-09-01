@@ -7,14 +7,9 @@ Snake Game made by Daniel Vieira(github.com/odvieira) and Lucas S. Takahashi(git
 Using Make on a terminal opened inside the game's folder, you can install and remove the game easily.
 Commands: (an desktop shortcut could be created by default, but the gnome-terminal is necessary)
 ##
-		$ make 	//Build the project, after that, by inserting line
-		$./snakeGame //you should be good to go
-##
-		$ make run  //build and execute;
-##
-		$ make clean //unmount the project;
-##
-		$ make purge //delete all files from the project
+		$ make 	//Build and run the project by default, but clean all builded files after execution
+		$ make build //Just build
+		$ make clean //Clean all the files
 
 ### Who do I talk to? ###
 
