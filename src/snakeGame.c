@@ -136,24 +136,22 @@ Status showRecords(int height, int width)
     return MAINMENU;
 }
 
-char* getGameTime(Time* startTime, char* formatedTime)
+char* getGameTime(char** string, time_t* start, time_t* now)
 {
-    time_t timeAux = time(&timeAux);
-    Time* now = localtime(&timeAux);
-    sprintf(formatedTime, "%d:%d:%d", now->tm_hour - startTime->tm_hour, now->tm_min - startTime->tm_min, now->tm_sec - startTime->tm_sec);
-    return formatedTime;
+    *now = time(now);
+    sprintf(*string, "%2.2ld:%2.2ld:%2.2ld\t",((*now - *start)/3600)%60,((*now - *start)/60)%60, (*now - *start)%60);
+    return *string;
 }
 
 int newGame(int height, int width)
 {
+    time_t start = time(&start), now;
+    char *string = (char*)malloc(sizeof(char)*13);
     srand(time(NULL));
     Board* board = createBoard(height, width);
     Status s = SUCCESS;
     Direction d = RIGHT;
-    int pts = 0, bonusCont = 0, bonusChkpt = 5;
-    time_t now = time(&now);
-    Time *startTime = localtime(&now);
-    char *formatedTime = (char*)malloc(sizeof(char)*20);
+    int pts = 0, bonusCont = 0, bonusChkpt = 4;
 
     while(s != FAILURE)
     {
@@ -167,7 +165,9 @@ int newGame(int height, int width)
         addstr(" Food\t\t");
         addch(ACS_CKBOARD);
         addstr(" Bonus\t\t");
-        addstr(getGameTime(startTime, &formatedTime));
+        addstr("ooo You\t\t");
+        addstr(getGameTime(&string, &start, &now));
+        printw(" Next Bonus: %d/%d", bonusCont, bonusChkpt + 1);
         displayCoord(board->snake, "o");
         displayCoord_chtype(board->food, ACS_DIAMOND);
         displayCoord_chtype(board->bonus, ACS_CKBOARD);
@@ -177,13 +177,13 @@ int newGame(int height, int width)
         if(s == INCREASED)
         {
             pts++;
-            if(bonusCont % bonusChkpt == 0 && bonusCont && !board->bonus)
+            if(bonusCont == bonusChkpt && !board->bonus)
             {
                 board->bonus = addBonus(board, height, width);
                 bonusChkpt += 5;
                 bonusCont = 0;
             }
-            else
+            else if(bonusCont < bonusChkpt)
                 bonusCont++;
         }
     }
@@ -343,7 +343,7 @@ int snakeCanGo(Board* board, int y, int x)
 
 Status gameOver(int height, int width, int pts)
 {
-    FILE* input_file = fopen("data/top_players_rec.snk", "r");
+    FILE* input_file = fopen("data/top_players_rec.dat", "r");
     Player *p = createPlayer(), *auxplayer = createPlayer();
     int i = 0, ptsaux, nlinhas, aux = '_';
     const char* text[] =

@@ -40,7 +40,7 @@ Status showRecords(int height, int width);
 Status gameOver(int height, int width, int pts);
 Status moveSnake(Board* snake, Direction d);
 
-char* getGameTime(Time* startTime, char* formatedTime);
+char* getGameTime(char** string, time_t* start, time_t* now);
 
 int newGame(int height, int width);
 int snakeCanGo(Board* board, int y, int x);
