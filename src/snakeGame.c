@@ -72,7 +72,7 @@ Status starting_screen(int height, int width)
         "___@@@@@@@___@@@_____@@@@@@__@@@___@@@__@@@__@@@__@@@@@@@@@___",
         "___@@@@@@@___@@@______@@@@@__@@@___@@@__@@@__@@@__@@@@@@@@@___",
         "PRESS ENTER TO START!",
-        "v1.0.0 - SNAPSHOT by Daniel Vieira and Lucas Shoiti"
+        "v1.5.1-Final by Daniel Vieira and Lucas Shoiti"
     };
 
     clear();
