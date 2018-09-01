@@ -6,19 +6,19 @@ output_name = snake
 desktop_name = Snake
 
 build: clean $(OBJ)
-	@gcc -g $(OBJ) $(DEPS) -o $(output_name) && mkdir obj && mv *.o obj;
+	@gcc $(OBJ) $(DEPS) -o $(output_name) && mkdir obj && mv *.o obj;
 
 main.o: src/main.c
-	@gcc -g -c src/main.c
+	@gcc -c src/main.c
 
 elements.o: src/elements.c
-	@gcc -g -c src/elements.c
+	@gcc -c src/elements.c
 
 snakeGame.o: src/snakeGame.c
-	@gcc -g -c src/snakeGame.c
+	@gcc -c src/snakeGame.c
 
 player.o: src/player.c
-	@gcc -g -c src/player.c
+	@gcc -c src/player.c
 
 run: build
 	@if [ -e ./$(output_name) ]; then ./$(output_name); else /usr/games/$(output_name)/$(output_name); fi; make clean;
