@@ -92,7 +92,7 @@ Status starting_screen(int height, int width)
 
 Status showRecords(int height, int width)
 {
-    FILE* input_file = fopen("data/top_players_rec.snk", "r");
+    FILE* input_file = fopen("data/top_players_rec.dat", "r");
     int pts, i, nlinhas;
     const short centerX = (width / 2);
     char* name = (char*)malloc(sizeof(char)*(PLAYER_NAME_SIZE + 1)),
@@ -407,7 +407,7 @@ Status gameOver(int height, int width, int pts)
     p = addPlayer(p, name, pts);
 
     //Writing the new file
-    FILE *output_file = fopen("data/top_players_rec.snk", "w");
+    FILE *output_file = fopen("data/top_players_rec.dat", "w");
 
     if(nlinhas < PLAYER_LIST_SIZE)
         fprintf(output_file, "%d\n", nlinhas + 1);
